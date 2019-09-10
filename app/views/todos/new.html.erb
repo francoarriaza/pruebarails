@@ -1,2 +1,11 @@
-<%= render 'form' %>
+<%= form_with(model: Todo.new,local: true) do |t| %>
+    
+    <div class="field">
+        <%= t.text_field :description %>
+    </div>
+
+    <div class="actions">
+        <%= t.submit %>
+    </div>
+<%end%> 
     
