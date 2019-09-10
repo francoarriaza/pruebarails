@@ -1,0 +1,10 @@
+<%= form_with(model: @todo, local: true) do |t| %>
+    
+    <div class="field">
+        <%= t.text_field :description %>
+    </div>
+
+    <div class="actions">
+        <%= t.submit %>
+    </div>
+<%end%> 

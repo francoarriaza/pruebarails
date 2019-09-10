@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-body">
+  <% @todos.each do |todo| %>
+    <td>
+    <h1 class="card-text"><%= todo.description %></h1>
+    <input complete="todo[completed]" type="hidden" value="0" />
+    <input checked="checked" type="checkbox" id="post_validated" complete="todo[completed]" value="1" />
+    </td>
+    <tr>
+    <td><%= link_to "show", todo %></td>
+    <td><%= link_to "Edit", todos_edit_path(todo) %></td>
+    <td><%= link_to "Delete", todo, method: :delete %></td>
+    </tr>
+  <% end %> 
+  </div>
+</div>
+
+<h1><%= link_to 'Crear ToDo', todos_new_path %><h1>
+
